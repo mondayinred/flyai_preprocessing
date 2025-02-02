@@ -1,2 +1,30 @@
 conda install selenium
-conda install chromedriver-autoinstaller 
+
+sudo apt update
+sudo apt install wget
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+
+wget https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.110/linux64/chromedriver-linux64.zip
+sudo apt install unzip
+unzip chromedriver-linux64.zip
+sudo mv chromedriver-linux64 /usr/local/bin/
+
+sudo apt install gedit -y
+sudo apt install gimp -y
+
+sudo apt install gedit -y
+sudo apt install gimp -y
+nano ~/.bashrc 들어가서 끝 줄에 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0 추가
+참고 사이트: <https://projecteli.tistory.com/185>
+수정하고 나서 파워쉘에서 wsl --shutdown Ubuntu-20.04 하고 wsl -l -v로 Stopped 상태인지 확인
+
+윈도우에 VcXsrv 깐다. 자세한 설정은 위 링크 참고
+sudo apt install x11-apps
+
+wget https://github.com/mozilla/geckodriver/releases/download/v0.35.0/geckodriver-v0.35.0-linux64.tar.gz
+tar -xvzf geckodriver-v0.35.0-linux64.tar.gz
+sudo mv geckodriver /usr/local/bin/
+
+sudo apt update
+sudo apt install fonts-nanum fonts-noto-cjk
